@@ -1,0 +1,22 @@
+{
+  "id": "person",
+  "type": "Person",
+  "name": "Person",
+  "description": "A person",
+  "displayField": "name",
+  "fields": [
+    {
+      "id": "name",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "id": "email",
+      "type": "Email"
+    },
+    {
+      "id": "image",
+      "type": "Text"
+    }
+  ]
+}

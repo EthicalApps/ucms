@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "/schema/person.json",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "image": {
+      "type": "string",
+      "format": "file",
+      "maxLength": 100
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "article",
+  "type": "Article",
+  "name": "Article",
+  "description": "A lurvely article",
+  "displayField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "type": "Text",
+      "required": true
+    },
+    {
+      "id": "body",
+      "type": "TextArea",
+      "required": true
+    },
+    {
+      "id": "authors",
+      "type": "Array",
+      "required": false,
+      "items": {
+        "type": "Reference",
+        "referenceType": "Person"
+      }
+    }
+  ]
+}

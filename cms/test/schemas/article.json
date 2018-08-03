@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "/schema/article.json",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "$ref": "/schema/person.json"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "body"
+  ]
+}
