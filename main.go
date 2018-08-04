@@ -11,6 +11,8 @@ import (
 	"github.com/ethicalapps/ucms/api"
 	"github.com/ethicalapps/ucms/cms"
 	"github.com/ethicalapps/ucms/cms/bolt"
+	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/middleware"
 )
 
 var (
@@ -36,8 +38,12 @@ func main() {
 	}
 	port := listener.Addr().(*net.TCPAddr).Port
 
+	router := chi.NewRouter()
+	router.Use(middleware.Heartbeat("/healthz"))
+	router.Mount("/api", api.Router())
+
 	go func() {
-		err = http.Serve(listener, api.Router())
+		err = http.Serve(listener, router)
 		if err != nil {
 			log.Fatal(err)
 		}
