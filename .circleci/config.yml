@@ -6,11 +6,11 @@ jobs:
       - image: circleci/golang:1.10.3
     environment:
       - GOCACHE: "/tmp/go/cache"
-      - DEP_VERSION: 0.4.1
+      - DEP_VERSION: 0.5.0
     steps:
       - checkout
       - restore_cache:
-          key: gopkg-{{ checksum "Gopkg.lock" }}
+          key: gopkg-v1-{{ checksum "Gopkg.lock" }}
           paths:
               - /go/src/github.com/ethicalapps/ucms/vendor
       - run:
@@ -22,7 +22,7 @@ jobs:
                 /go/bin/dep ensure
             fi
       - save_cache:
-          key: gopkg-{{ checksum "Gopkg.lock" }}
+          key: gopkg-v1-{{ checksum "Gopkg.lock" }}
           paths:
                - /go/src/github.com/ethicalapps/ucms/vendor
       - restore_cache:

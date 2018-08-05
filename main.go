@@ -36,7 +36,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	port := listener.Addr().(*net.TCPAddr).Port
 
 	router := chi.NewRouter()
 	router.Use(middleware.Heartbeat("/healthz"))
@@ -49,12 +48,10 @@ func main() {
 		}
 	}()
 
+	port := listener.Addr().(*net.TCPAddr).Port
 	log.Println("[uCMS]", "listening on", *fHost, port)
 
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt, os.Kill)
 	<-quit
-
-	// TODO: deregister service
-
 }
