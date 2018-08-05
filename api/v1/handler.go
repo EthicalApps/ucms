@@ -19,6 +19,7 @@ func getContentType(w http.ResponseWriter, r *http.Request) {
 	}
 
 	contentType := chi.URLParam(r, urlParamContentType)
+
 	data, err := repo.GetType(contentType)
 	if err != nil {
 		render.Render(w, r, ErrBadRequest(err))
@@ -46,6 +47,7 @@ func getSchema(w http.ResponseWriter, r *http.Request) {
 	}
 
 	contentType := chi.URLParam(r, urlParamContentType)
+
 	data, err := repo.GetSchema(contentType)
 	if err != nil {
 		render.Render(w, r, ErrBadRequest(err))
@@ -74,6 +76,7 @@ func getDocument(w http.ResponseWriter, r *http.Request) {
 
 	contentType := chi.URLParam(r, urlParamContentType)
 	contentID := chi.URLParam(r, urlParamContentID)
+
 	data, err := repo.GetDocument(contentType, contentID)
 	if err != nil {
 		render.Render(w, r, ErrBadRequest(err))
