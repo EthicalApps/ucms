@@ -26,7 +26,7 @@ func TestRepository(t *testing.T) {
 		log.Fatal(err)
 	}
 
-	content, err := ioutil.ReadFile("./test/types/person.json")
+	content, err := ioutil.ReadFile("testdata/types/person.json")
 	if err != nil {
 		t.Error("ERROR:", err)
 	}
@@ -34,7 +34,7 @@ func TestRepository(t *testing.T) {
 		t.Error("ERROR:", err)
 	}
 
-	content, err = ioutil.ReadFile("./test/types/article.json")
+	content, err = ioutil.ReadFile("testdata/types/article.json")
 	if err != nil {
 		t.Error("ERROR:", err)
 	}
@@ -42,7 +42,7 @@ func TestRepository(t *testing.T) {
 		t.Error("ERROR:", err)
 	}
 
-	content, err = ioutil.ReadFile("./test/documents/person_1.json")
+	content, err = ioutil.ReadFile("testdata/documents/person_1.json")
 	if err != nil {
 		t.Error("ERROR:", err)
 	}
@@ -50,7 +50,7 @@ func TestRepository(t *testing.T) {
 		t.Error("ERROR:", err)
 	}
 
-	content, err = ioutil.ReadFile("./test/documents/article_1.json")
+	content, err = ioutil.ReadFile("testdata/documents/article_1.json")
 	if err != nil {
 		t.Error("ERROR:", err)
 	}
@@ -58,7 +58,7 @@ func TestRepository(t *testing.T) {
 		t.Error("ERROR:", err)
 	}
 
-	content, err = ioutil.ReadFile("./test/documents/article_2.json")
+	content, err = ioutil.ReadFile("testdata/documents/article_2.json")
 	if err != nil {
 		t.Error("ERROR:", err)
 	}
