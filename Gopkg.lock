@@ -10,6 +10,14 @@
   version = "v1.3.0"
 
 [[projects]]
+  digest = "1:a2c1d0e43bd3baaa071d1b9ed72c27d78169b2b269f71c105ac4ba34b1be4a39"
+  name = "github.com/davecgh/go-spew"
+  packages = ["spew"]
+  pruneopts = "UT"
+  revision = "346938d642f2ec3594ed81d874461961cd0faa76"
+  version = "v1.1.0"
+
+[[projects]]
   digest = "1:4eda9f7bf70f5145b3b9ed3f18ac93e9b1a0e38906eb69e526380c34861e2b07"
   name = "github.com/go-chi/chi"
   packages = [
@@ -27,6 +35,22 @@
   pruneopts = "UT"
   revision = "3215478343fbc559bd3fc08f7031bb134d6bdad5"
   version = "v1.0.1"
+
+[[projects]]
+  digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
+  name = "github.com/pmezard/go-difflib"
+  packages = ["difflib"]
+  pruneopts = "UT"
+  revision = "792786c7400a136282c1664665ae0a8db921c6c2"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:18752d0b95816a1b777505a97f71c7467a8445b8ffb55631a7bf779f6ba4fa83"
+  name = "github.com/stretchr/testify"
+  packages = ["assert"]
+  pruneopts = "UT"
+  revision = "f35b8ab0b5a2cef36673838d662e249dd9c94686"
+  version = "v1.2.2"
 
 [[projects]]
   branch = "master"
@@ -54,11 +78,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:9ec6ad2659635ba0974dd7e55bf84233523eb4e7535c9a2fddaefc4cc62a3eac"
+  digest = "1:7e758f807faab4ca5614488e6397d2365f9a5767f6699a805bbe92a1d1a6da23"
   name = "golang.org/x/sys"
   packages = ["unix"]
   pruneopts = "UT"
-  revision = "0ffbfd41fbef8ffcf9b62b0b0aa3a5873ed7a4fe"
+  revision = "2be389f392cd91df245b41638f818a1c041f0c08"
 
 [solve-meta]
   analyzer-name = "dep"
@@ -68,6 +92,7 @@
     "github.com/go-chi/chi",
     "github.com/go-chi/chi/middleware",
     "github.com/go-chi/render",
+    "github.com/stretchr/testify/assert",
     "github.com/xeipuuv/gojsonschema",
   ]
   solver-name = "gps-cdcl"
