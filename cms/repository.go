@@ -66,7 +66,7 @@ func (r *Repository) PutType(id string, content []byte) error {
 			return err
 		}
 
-		return r.Store.PutDocument(r.Name, "type:"+id, content)
+		return r.Store.PutDocument(r.Name, "type", id, content)
 	}
 
 	fmt.Printf("The document is not valid. see errors :\n")
@@ -78,7 +78,7 @@ func (r *Repository) PutType(id string, content []byte) error {
 
 // GetType returns a type from the repository
 func (r *Repository) GetType(id string) ([]byte, error) {
-	return r.Store.GetDocument(r.Name, "type:"+id)
+	return r.Store.GetDocument(r.Name, "type", id)
 }
 
 // PutSchema stores a schema in the repository
@@ -95,12 +95,12 @@ func (r *Repository) PutSchema(id string, content []byte) error {
 		return errors.New("[PutSchema] " + "'" + id + "'" + " is not valid: " + err.Error() + "\n" + string(content))
 	}
 
-	return r.Store.PutDocument(r.Name, "schema:"+id, content)
+	return r.Store.PutDocument(r.Name, "schema", id, content)
 }
 
 // GetSchema gets a schema from the Repository
 func (r *Repository) GetSchema(id string) ([]byte, error) {
-	return r.Store.GetDocument(r.Name, "schema:"+id)
+	return r.Store.GetDocument(r.Name, "schema", id)
 }
 
 // PutDocument stores a document in the Repository
@@ -128,7 +128,7 @@ func (r *Repository) PutDocument(typeID, id string, content []byte) error {
 
 	if res.Valid() {
 		// save a version of the document
-		return r.Store.PutDocument(r.Name, typeID+":"+id, content)
+		return r.Store.PutDocument(r.Name, typeID, id, content)
 	}
 
 	fmt.Printf("The document is not valid. see errors :\n")
@@ -140,5 +140,10 @@ func (r *Repository) PutDocument(typeID, id string, content []byte) error {
 
 // GetDocument gets a document from the Repository
 func (r *Repository) GetDocument(typeID, id string) ([]byte, error) {
-	return r.Store.GetDocument(r.Name, typeID+":"+id)
+	return r.Store.GetDocument(r.Name, typeID, id)
+}
+
+// ListDocuments returns a collection of documents of the specified type
+func (r *Repository) ListDocuments(typeID string) ([][]byte, error) {
+	return r.Store.ListDocuments(r.Name, typeID)
 }

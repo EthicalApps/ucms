@@ -66,6 +66,11 @@ func TestRepository(t *testing.T) {
 		t.Error("ERROR:", err)
 	}
 
+	docs, err := repo.ListDocuments("article")
+	if len(docs) != 2 {
+		t.Error("Expected 2 docs, got", len(docs))
+	}
+
 	store.Close()
 
 	if err := os.Remove(db); err != nil {

@@ -3,8 +3,9 @@ package cms
 // Store is the generic interface to a uCMS store
 type Store interface {
 	CreateBucket(name string) error
-	PutDocument(bucket, key string, data []byte) error
-	GetDocument(bucket, key string) ([]byte, error)
+	PutDocument(bucket, namespace, id string, data []byte) error
+	GetDocument(bucket, namespace, id string) ([]byte, error)
+	ListDocuments(bucket, namespace string) ([][]byte, error)
 	Close() error
 }
 

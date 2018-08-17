@@ -21,6 +21,7 @@ func Router() http.Handler {
 		r.Get("/type/{contentType}.json", getContentType)
 		r.Get("/schema/{contentType}.json", getSchema)
 		r.Get("/{contentType}/{contentID}.json", getDocument)
+		r.Get("/{contentType}", listDocuments)
 
 		r.Group(func(r chi.Router) {
 			r.Use(authentication)

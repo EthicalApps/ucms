@@ -94,6 +94,34 @@ func getDocument(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func listDocuments(w http.ResponseWriter, r *http.Request) {
+	ctx := r.Context()
+	repo, ok := ctx.Value(contextKeyRepo).(*cms.Repository)
+	if !ok {
+		err := errors.New(string(contextKeyRepo) + " not found in context")
+		render.Render(w, r, ErrInternalServerError(err))
+		return
+	}
+
+	contentType := chi.URLParam(r, urlParamContentType)
+
+	data, err := repo.ListDocuments(contentType)
+	if err != nil {
+		render.Render(w, r, ErrBadRequest(err))
+		return
+	}
+
+	if data == nil {
+		err = errors.New("documents " + "'" + contentType + "'" + " not found")
+		render.Render(w, r, ErrNotFound(err))
+		return
+	}
+
+	if err := render.Render(w, r, &CollectionResponse{data: data}); err != nil {
+		render.Render(w, r, ErrInternalServerError(err))
+	}
+}
+
 func putContentType(w http.ResponseWriter, r *http.Request) {
 }
 
