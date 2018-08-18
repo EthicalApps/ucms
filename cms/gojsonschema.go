@@ -7,14 +7,14 @@ import (
 )
 
 func init() {
-	gojsonschema.FormatCheckers.Add("file", FileFormatChecker{})
+	gojsonschema.FormatCheckers.Add("file", fileFormatChecker{})
 }
 
 // FileFormatChecker checks for file format
-type FileFormatChecker struct{}
+type fileFormatChecker struct{}
 
 // IsFormat implements the gojsonschema.FormatChecker interface
-func (f FileFormatChecker) IsFormat(input interface{}) bool {
+func (f fileFormatChecker) IsFormat(input interface{}) bool {
 	asString, ok := input.(string)
 	if ok == false {
 		return false
