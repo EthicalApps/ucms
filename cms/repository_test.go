@@ -11,7 +11,7 @@ import (
 )
 
 func TestRepository(t *testing.T) {
-	db := "test.db"
+	db := "repository_test.db"
 
 	store, err := bolt.New(db)
 	if err != nil {
@@ -21,7 +21,7 @@ func TestRepository(t *testing.T) {
 
 	cms.Init(store)
 
-	repo, err := cms.NewRepository("blog")
+	repo, err := cms.NewRepository("repository_test")
 	if err != nil {
 		log.Fatal(err)
 	}

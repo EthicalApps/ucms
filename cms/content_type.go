@@ -27,7 +27,7 @@ type Field struct {
 	} `json:"items,omitempty"`
 }
 
-// GenerateSchema generates a JSON schema for a given typedef
+// GenerateSchema generates a JSON schema for a given ContentType
 func GenerateSchema(c *ContentType) ([]byte, error) {
 	required := []string{}
 	properties := []string{}
@@ -63,14 +63,19 @@ func GenerateSchema(c *ContentType) ([]byte, error) {
 	return out, nil
 }
 
+// GenerateIndexMapping generates a bleve search index mapping for a given
+// ContentType
+// func GenerateIndexMapping(c *ContentType) ([]byte, error) {
+// }
+
 func generateField(field *Field) string {
 	return fmt.Sprintf(`
 "%s": {
 	"type": "%s"
-}`, field.ID, typemap(field.Type))
+}`, field.ID, schemaTypemap(field.Type))
 }
 
-func typemap(t string) string {
+func schemaTypemap(t string) string {
 	if t == "Text" {
 		return "string"
 	} else if t == "TextArea" {
