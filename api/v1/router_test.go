@@ -11,7 +11,7 @@ import (
 
 	"github.com/ethicalapps/ucms/api/v1"
 	"github.com/ethicalapps/ucms/cms"
-	"github.com/ethicalapps/ucms/cms/bolt"
+	"github.com/ethicalapps/ucms/cms/store/bolt"
 	"github.com/stretchr/testify/assert"
 )
 

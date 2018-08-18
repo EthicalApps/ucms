@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/ethicalapps/ucms/cms"
-	"github.com/ethicalapps/ucms/cms/bolt"
+	"github.com/ethicalapps/ucms/cms/store/bolt"
 )
 
 func TestSearch(t *testing.T) {
