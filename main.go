@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path/filepath"
 
 	"github.com/ethicalapps/ucms/api"
 	"github.com/ethicalapps/ucms/cms"
@@ -19,18 +20,19 @@ var (
 	fHost = flag.String("host", "127.0.0.1", "service host")
 	fPort = flag.String("port", ":0", "service port")
 	fDB   = flag.String("db", "ucms.db", "database file")
+	fDir  = flag.String("dir", "", "data directory")
 )
 
 func main() {
 	flag.Parse()
 
-	store, err := bolt.New(*fDB)
+	store, err := bolt.New(filepath.Join(*fDir, *fDB))
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer store.Close()
 
-	cms.Init(store)
+	cms.Init(*fDir, store)
 
 	listener, err := net.Listen("tcp", *fPort)
 	if err != nil {

@@ -4,6 +4,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/ethicalapps/ucms/cms"
@@ -11,17 +12,27 @@ import (
 )
 
 func TestRepository(t *testing.T) {
-	db := "repository_test.db"
+	db := "test.db"
 
-	store, err := bolt.New(db)
+	dir, err := ioutil.TempDir("", "test")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer os.RemoveAll(dir)
+
+	store, err := bolt.New(filepath.Join(dir, db))
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer store.Close()
 
-	cms.Init(store)
+	cms.Init(dir, store)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer os.RemoveAll(dir)
 
-	repo, err := cms.NewRepository("repository_test")
+	repo, err := cms.NewRepository("repo")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -72,8 +83,4 @@ func TestRepository(t *testing.T) {
 	}
 
 	store.Close()
-
-	if err := os.Remove(db); err != nil {
-		t.Error("ERROR:", err)
-	}
 }

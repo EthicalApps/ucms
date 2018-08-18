@@ -3,6 +3,8 @@ package cms_test
 import (
 	"io/ioutil"
 	"log"
+	"os"
+	"path/filepath"
 	"testing"
 
 	"github.com/ethicalapps/ucms/cms"
@@ -10,17 +12,26 @@ import (
 )
 
 func TestSearch(t *testing.T) {
-	db := "search_test.db"
+	db := "test.db"
 
-	store, err := bolt.New(db)
+	dir, err := ioutil.TempDir("", "test")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer os.RemoveAll(dir)
+
+	store, err := bolt.New(filepath.Join(dir, db))
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer store.Close()
 
-	cms.Init(store)
+	cms.Init(dir, store)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	repo, err := cms.NewRepository("search_test")
+	repo, err := cms.NewRepository("repo")
 	if err != nil {
 		log.Fatal(err)
 	}

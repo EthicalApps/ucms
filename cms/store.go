@@ -9,9 +9,13 @@ type Store interface {
 	Close() error
 }
 
-var store Store
+var (
+	dir   string
+	store Store
+)
 
-// Init initializes the CMS with the given store
-func Init(s Store) {
+// Init initializes the CMS with the given dir & store
+func Init(d string, s Store) {
+	dir = d
 	store = s
 }

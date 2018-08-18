@@ -3,6 +3,7 @@ package cms
 import (
 	"errors"
 	"os"
+	"path/filepath"
 
 	"github.com/blevesearch/bleve"
 )
@@ -18,6 +19,8 @@ func (r *Repository) CreateIndex(namespace string) error {
 	mapping := bleve.NewIndexMapping()
 	// mapping.UnmarshalJSON(GenerateIndexMapping(...))
 	filename := r.Name + "_" + namespace + ".bleve"
+	filename = filepath.Join(dir, filename)
+
 	var index bleve.Index
 
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
