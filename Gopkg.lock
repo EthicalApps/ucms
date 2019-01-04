@@ -94,7 +94,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5b2568658291cbe56a665fba1da192632a97742847c0dc9255138cdb8e531ab0"
+  digest = "1:5baab41073db5e257165c40ac650ced164433ce0ab63e80a4ea399ed38a8231f"
   name = "github.com/couchbase/vellum"
   packages = [
     ".",
@@ -102,7 +102,7 @@
     "utf8",
   ]
   pruneopts = "UT"
-  revision = "dc6110ee42850a6553b6469bf0dc03383900353d"
+  revision = "dd17fb852690c5b0068b26995fb4e63a2f7cb1c1"
 
 [[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
@@ -113,20 +113,20 @@
   version = "v1.1.1"
 
 [[projects]]
-  branch = "master"
-  digest = "1:67d0b50be0549e610017cb91e0b0b745ec0cad7c613bc8e18ff2d1c1fc8825a7"
+  digest = "1:edb569dd02419a41ddd98768cc0e7aec922ef19dae139731e5ca750afcf6f4c5"
   name = "github.com/edsrzf/mmap-go"
   packages = ["."]
   pruneopts = "UT"
-  revision = "0bce6a6887123b67a60366d2c9fe2dfb74289d2e"
+  revision = "188cc3b666ba704534fa4f96e9e61f21f1e1ba7c"
+  version = "v1.0.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:981722e5ee549ef844285c2b370c19e58b7dc30bc19ba3537f3df284b551b54a"
+  digest = "1:dc925a7d0f70e394be6a79f060b06dfdecfabdc88cfd1cfa1c9d9462c6edca1f"
   name = "github.com/glycerine/go-unsnap-stream"
   packages = ["."]
   pruneopts = "UT"
-  revision = "9f0cb55181dd3a0a4c168d3dbc72d4aca4853126"
+  revision = "f9677308dec2b35e76737f9713df328ad11b1fea"
 
 [[projects]]
   digest = "1:a9fe0f8ff72c388d0128e88ce5f3c27d37dcd0950acd7cdb8323555f12463396"
@@ -202,12 +202,12 @@
   version = "v1.2.2"
 
 [[projects]]
-  digest = "1:eaa6698f44de8f2977e93c9b946e60a8af75f565058658aad2df8032b55c84e5"
+  digest = "1:c97e8a5e5c435c3287f581cdb4441ba34577ec6ead8422bfedafa6269af7abf6"
   name = "github.com/tinylib/msgp"
   packages = ["msgp"]
   pruneopts = "UT"
-  revision = "b2b6a672cf1e5b90748f79b8b81fc8c5cf0571a1"
-  version = "1.0.2"
+  revision = "af6442a0fcf6e2a1b824f70dd0c734f01e817751"
+  version = "v1.1.0"
 
 [[projects]]
   digest = "1:542c6a724e70496d05fb3b40c45857fc0e353ed5f1c0ec4567fcf54c2f3b9619"
@@ -233,12 +233,12 @@
   revision = "bd5ef7bd5415a7ac448318e64f11a24cd21e594b"
 
 [[projects]]
-  branch = "master"
-  digest = "1:738d89c925f97af8df16f7171d4945d31e4ffae673b4918781c9707aa86821b2"
+  digest = "1:41bd4de0a27c0b7affef4083bc8f86501b4c7d891f95809a0fb758a23eb5e78f"
   name = "github.com/xeipuuv/gojsonschema"
   packages = ["."]
   pruneopts = "UT"
-  revision = "ac52e6811b56ee2b7730a88915e956afe2cc0d69"
+  revision = "da425ebb7609ba06a0f395fc8a254d1c303364a0"
+  version = "v1.0"
 
 [[projects]]
   digest = "1:6ad30c4e66653ca512cc3f3894686fc4cdd17af1c7fd51603a10e1b31538ad81"
@@ -249,11 +249,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:05662433b3a13c921587a6e622b5722072edff83211efd1cd79eeaeedfd83f07"
+  digest = "1:191cccd950a4aeadb60306062f2bdc2f924d750d0156ec6c691b17211bfd7349"
   name = "golang.org/x/sys"
-  packages = ["unix"]
+  packages = [
+    "unix",
+    "windows",
+  ]
   pruneopts = "UT"
-  revision = "1c9583448a9c3aa0f9a6a5241bf73c0bd8aafded"
+  revision = "82a175fd1598e8a172e58ebdf5ed262bb29129e5"
 
 [solve-meta]
   analyzer-name = "dep"
