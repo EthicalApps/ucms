@@ -10,15 +10,7 @@
   version = "v0.4.16"
 
 [[projects]]
-  branch = "master"
-  digest = "1:64032380524ef4bdf370ed291ec02f0c129d540d91fac689bfb693ef203d73dd"
-  name = "github.com/Smerity/govarint"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "7265e41f48f15fd61751e16da866af3c704bb3ab"
-
-[[projects]]
-  digest = "1:0a911d543a8c44cfe88bc8e56fcaef5aef8fecc7eed598faa334ed64923466c8"
+  digest = "1:b41928940e11469a5db8f0f84c2ab97acebe902223262819757e842f12f0b467"
   name = "github.com/blevesearch/bleve"
   packages = [
     ".",
@@ -37,7 +29,6 @@
     "index/scorch",
     "index/scorch/mergeplan",
     "index/scorch/segment",
-    "index/scorch/segment/mem",
     "index/scorch/segment/zap",
     "index/store",
     "index/store/boltdb",
@@ -57,10 +48,11 @@
     "search/query",
     "search/scorer",
     "search/searcher",
+    "size",
   ]
   pruneopts = "UT"
-  revision = "1a319cdf5bf77dc8cee35a6b99f908792c2547ef"
-  version = "v0.7.0"
+  revision = "0bb7fb280a4cc7fa691add6809fdf0d9273f726a"
+  version = "v0.8.0"
 
 [[projects]]
   branch = "master"
@@ -78,13 +70,6 @@
   revision = "db70c57796cc8c310613541dfade3dce627d09c7"
 
 [[projects]]
-  digest = "1:8a94a15cd36028e52e4acb843458efb7c8e4a06795591f47f8e4e436a7320459"
-  name = "github.com/boltdb/bolt"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "9da31745363232bc1e27dbab3569e77383a51585"
-
-[[projects]]
   digest = "1:c28625428387b63dd7154eb857f51e700465cfbf7c06f619e71f2da33cefe47e"
   name = "github.com/coreos/bbolt"
   packages = ["."]
@@ -94,10 +79,11 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:5baab41073db5e257165c40ac650ced164433ce0ab63e80a4ea399ed38a8231f"
+  digest = "1:0f60f32b664a8b0dd433339caa987a2af88c5f86a59af339fb59be16a8b23d78"
   name = "github.com/couchbase/vellum"
   packages = [
     ".",
+    "levenshtein2",
     "regexp",
     "utf8",
   ]
@@ -119,6 +105,14 @@
   pruneopts = "UT"
   revision = "188cc3b666ba704534fa4f96e9e61f21f1e1ba7c"
   version = "v1.0.0"
+
+[[projects]]
+  digest = "1:f2ac2c724fc8214bb7b9dd6d4f5b7a983152051f5133320f228557182263cb94"
+  name = "github.com/etcd-io/bbolt"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "a0458a2b35708eef59eb5f620ceb3cd1c01a824d"
+  version = "v1.3.3"
 
 [[projects]]
   branch = "master"
@@ -239,13 +233,6 @@
   pruneopts = "UT"
   revision = "da425ebb7609ba06a0f395fc8a254d1c303364a0"
   version = "v1.0"
-
-[[projects]]
-  digest = "1:6ad30c4e66653ca512cc3f3894686fc4cdd17af1c7fd51603a10e1b31538ad81"
-  name = "golang.org/x/net"
-  packages = ["context"]
-  pruneopts = "UT"
-  revision = "e45385e9b226f570b1f086bf287b25d3d4117776"
 
 [[projects]]
   branch = "master"
