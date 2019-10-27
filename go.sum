@@ -14,6 +14,8 @@ github.com/boltdb/bolt v1.3.2-0.20171120010307-9da317453632 h1:5cBPp9mZiSPzQ3mQA
 github.com/boltdb/bolt v1.3.2-0.20171120010307-9da317453632/go.mod h1:clJnj/oiGkjum5o1McbSZDSLxVThjynRyGBgiAx27Ps=
 github.com/coreos/bbolt v1.3.0 h1:HIgH5xUWXT914HCI671AxuTTqjj64UOFr7pHn48LUTI=
 github.com/coreos/bbolt v1.3.0/go.mod h1:iRUV2dpdMOn7Bo10OQBFzIJO9kkE559Wcmn+qkEiiKk=
+github.com/coreos/bbolt v1.3.3 h1:n6AiVyVRKQFNb6mJlwESEvvLoDyiTzXX7ORAUlkeBdY=
+github.com/coreos/bbolt v1.3.3/go.mod h1:iRUV2dpdMOn7Bo10OQBFzIJO9kkE559Wcmn+qkEiiKk=
 github.com/couchbase/vellum v0.0.0-20181205055959-dd17fb852690 h1:fnU3vaWPeZsCWD292/lS4rXcYZUvxo196Kjoo6W92tk=
 github.com/couchbase/vellum v0.0.0-20181205055959-dd17fb852690/go.mod h1:prYTC8EgTu3gwbqJihkud9zRXISvyulAplQ6exdCo1g=
 github.com/cznic/b v0.0.0-20181122101859-a26611c4d92d h1:SwD98825d6bdB+pEuTxWOXiSjBrHdOl/UVp75eI7JT8=
