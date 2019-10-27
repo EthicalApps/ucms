@@ -10,7 +10,7 @@ require (
 	github.com/blevesearch/go-porterstemmer v1.0.2 // indirect
 	github.com/blevesearch/segment v0.0.0-20160105220820-db70c57796cc // indirect
 	github.com/boltdb/bolt v1.3.2-0.20171120010307-9da317453632 // indirect
-	github.com/coreos/bbolt v1.3.0
+	github.com/coreos/bbolt v1.3.3
 	github.com/couchbase/vellum v0.0.0-20181205055959-dd17fb852690 // indirect
 	github.com/cznic/b v0.0.0-20181122101859-a26611c4d92d // indirect
 	github.com/cznic/mathutil v0.0.0-20181122101859-297441e03548 // indirect
