@@ -24,6 +24,7 @@ type Field struct {
 	Items    struct {
 		Type          string `json:"type"`
 		ReferenceType string `json:"referenceType"`
+		ReferenceID   string `json:"referenceID"`
 	} `json:"items,omitempty"`
 }
 
@@ -146,6 +147,9 @@ const ContentTypeSchema = `{
               "type": "string"
             },
             "referenceType": {
+              "type": "string"
+            },
+            "referenceID": {
               "type": "string"
             }
           },

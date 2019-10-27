@@ -21,7 +21,8 @@
       "required": false,
       "items": {
         "type": "Reference",
-        "referenceType": "Person"
+        "referenceType": "Person",
+        "referenceID": "person1"
       }
     }
   ]
