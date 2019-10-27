@@ -4,6 +4,8 @@ github.com/Smerity/govarint v0.0.0-20150407073650-7265e41f48f1 h1:G/NOANWMQev0Cf
 github.com/Smerity/govarint v0.0.0-20150407073650-7265e41f48f1/go.mod h1:o80NPAib/LOl8Eysqppjj7kkGkqz++eqzYGlvROpDcQ=
 github.com/blevesearch/bleve v0.7.0 h1:znyZ3zjsh2Scr60vszs7rbF29TU6i1q9bfnZf1vh0Ac=
 github.com/blevesearch/bleve v0.7.0/go.mod h1:Y2lmIkzV6mcNfAnAdOd+ZxHkHchhBfU/xroGIp61wfw=
+github.com/blevesearch/bleve v0.8.1 h1:20zBREtGe8dvBxCC+717SaxKcUVQOWk3/Fm75vabKpU=
+github.com/blevesearch/bleve v0.8.1/go.mod h1:Y2lmIkzV6mcNfAnAdOd+ZxHkHchhBfU/xroGIp61wfw=
 github.com/blevesearch/blevex v0.0.0-20190916190636-152f0fe5c040 h1:SjYVcfJVZoCfBlg+fkaq2eoZHTf5HaJfaTeTkOtyfHQ=
 github.com/blevesearch/blevex v0.0.0-20190916190636-152f0fe5c040/go.mod h1:WH+MU2F4T0VmSdaPX+Wu5GYoZBrYWdOZWSjzvYcDmqQ=
 github.com/blevesearch/go-porterstemmer v1.0.2 h1:qe7n69gBd1OLY5sHKnxQHIbzn0LNJA4hpAf+5XDxV2I=
@@ -26,6 +28,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/edsrzf/mmap-go v1.0.0 h1:CEBF7HpRnUCSJgGUb5h1Gm7e3VkmVDrR8lvWVLtrOFw=
 github.com/edsrzf/mmap-go v1.0.0/go.mod h1:YO35OhQPt3KJa3ryjFM5Bs14WD66h8eGKpfaBNrHW5M=
+github.com/etcd-io/bbolt v1.3.3 h1:gSJmxrs37LgTqR/oyJBWok6k6SvXEUerFTbltIhXkBM=
+github.com/etcd-io/bbolt v1.3.3/go.mod h1:ZF2nL25h33cCyBtcyWeZ2/I3HQOfTP+0PIEvHjkjCrw=
 github.com/facebookgo/ensure v0.0.0-20160127193407-b4ab57deab51 h1:0JZ+dUmQeA8IIVUMzysrX4/AKuQwWhV2dYQuPZdvdSQ=
 github.com/facebookgo/ensure v0.0.0-20160127193407-b4ab57deab51/go.mod h1:Yg+htXGokKKdzcwhuNDwVvN+uBxDGXJ7G/VN1d8fa64=
 github.com/facebookgo/stack v0.0.0-20160209184415-751773369052 h1:JWuenKqqX8nojtoVVWjGfOF9635RETekkoH6Cc9SX0A=

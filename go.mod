@@ -5,7 +5,7 @@ go 1.13
 require (
 	github.com/RoaringBitmap/roaring v0.4.16 // indirect
 	github.com/Smerity/govarint v0.0.0-20150407073650-7265e41f48f1 // indirect
-	github.com/blevesearch/bleve v0.7.0
+	github.com/blevesearch/bleve v0.8.1
 	github.com/blevesearch/blevex v0.0.0-20190916190636-152f0fe5c040 // indirect
 	github.com/blevesearch/go-porterstemmer v1.0.2 // indirect
 	github.com/blevesearch/segment v0.0.0-20160105220820-db70c57796cc // indirect
