@@ -22,7 +22,7 @@ require (
 	github.com/facebookgo/subset v0.0.0-20150612182917-8dac2c3c4870 // indirect
 	github.com/glycerine/go-unsnap-stream v0.0.0-20181221182339-f9677308dec2 // indirect
 	github.com/glycerine/goconvey v0.0.0-20190410193231-58a59202ab31 // indirect
-	github.com/go-chi/chi v3.3.3+incompatible
+	github.com/go-chi/chi v3.3.4+incompatible
 	github.com/go-chi/render v1.0.1
 	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/jmhodges/levigo v1.0.0 // indirect
